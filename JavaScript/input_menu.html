@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let menu = prompt("A, B, C, D, E 중 하나를 입력하시오.");
+      let message = "";
+
+      // if (menu == "A") {
+      //   message = "황금올리브";
+      // } else if (menu == "B") {
+      //   message = "허니콤보";
+      // } else if (menu == "c") {
+      //   message = "뿌링클";
+      // } else if (menu == "D") {
+      //   message = "슈프림치킨";
+      // } else if (menu == "E") {
+      //   message = "지코바치킨";
+      // } else {
+      //   message = "입력이 올바르지 않습니다.";
+      // }
+
+      switch (menu) {
+        case "A":
+          message += "황금올리브,";
+
+        case "B":
+          message += "허니콤보,";
+
+        case "C":
+          message += "뿌링클,";
+
+        case "D":
+          message += "슈프림치킨,";
+
+        case "E":
+          message += "지코바치킨,";
+
+        default:
+          message += "입력이 올바르지 않습니다.";
+      }
+
+      alert(message);
+    </script>
+  </body>
+</html>

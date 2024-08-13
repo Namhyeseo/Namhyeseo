@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Nanum+Gothic+Coding&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-size: 12px;
+        font-family: "Nanum Gothic", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+      #wrap {
+        width: 1400px;
+        margin: 0 auto;
+        height: 100vh;
+      }
+
+      #header {
+        width: 100%;
+        height: 300px;
+        background-color: lightgray;
+        position: relative;
+      }
+
+      #header > #picture {
+        width: 250px;
+        height: 250px;
+        position: absolute;
+        left: 600px;
+        top: 25px;
+
+        background-image: url("images/KakaoTalk_20240801_120731425.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+      }
+
+      #content {
+        overflow: hidden;
+        height: 600px;
+      }
+
+      #left-bar {
+        width: 20%;
+
+        background-color: #e37cff;
+        float: left;
+      }
+
+      #left-bar > ul#menu > li {
+        list-style: none;
+        font-size: 2em;
+        font-weight: 700;
+        text-align: center;
+        padding: 10px 0px;
+      }
+
+      #right-bar {
+        width: 80%;
+
+        float: left;
+        background-color: #fefefe;
+      }
+
+      #right-bar > ul#right-bar-body > li {
+        list-style: none;
+        font-size: 2em;
+        padding: 10px 0px;
+        margin-left: 50px;
+      }
+      .pulse {
+        width: 100px;
+        height: 100px;
+        background-color: #3498db;
+        border-radius: 50%;
+        animation: pulse 2s;
+      }
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+          opacity: 1;
+        }
+        50% {
+          transform: scale(1.5);
+          opacity: 0.5;
+        }
+        100% {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+      .ani {
+        animation: slide 10s ease-out;
+      }
+      @keyframes slide {
+        from {
+          left: -200px;
+          opacity: 0;
+        }
+        to {
+          left: 600px;
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <div id="header">
+        <div id="picture" class="pulse"></div>
+      </div>
+      <div id="content">
+        <div id="left-bar">
+          <ul id="menu">
+            <li>이름</li>
+            <li>생년월일</li>
+            <li>MBTI</li>
+            <li>가족관계</li>
+            <li>장점</li>
+            <li>단점</li>
+            <li>요즘 듣는 노래</li>
+            <li>좋아하는 거</li>
+            <li>싫어하는 거</li>
+            <li>좌우명</li>
+            <li>취업 후 버킷리스트</li>
+          </ul>
+        </div>
+        <div id="right-bar" class="ani">
+          <ul id="right-bar-body">
+            <li>남혜서</li>
+            <li>2000.12.01</li>
+            <li>INFP</li>
+            <li>아빠(70) 엄마(72) 나(00) 남동생(04)</li>
+            <li>
+              배려심이 많음, 섬세함, 공감잘함, 상상력 풍부, 연애고민상담
+              잘들어줌, 편지 쓰기
+            </li>
+            <li>게으른 완벽주의, 고집있음, 소심함</li>
+            <li>lmhfrom-comport, 루시-히어로</li>
+            <li>
+              연보라색, 매운 음식, 탄산, OTT 시청, 음악들으면서 산책, 산리오
+              캐릭터, 코노가기, 초코
+            </li>
+            <li>해산물, 오이냉국(오이제외), 민트초코, 수학, 과학, 운동</li>
+            <li>안 되면 되는거 해라</li>
+            <li>강원도 2박3일 여행, 라식수술, 눈썹문신</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
