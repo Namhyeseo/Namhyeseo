@@ -19,6 +19,17 @@ $('body').append($('<h1>Infinity Scroll</h1>'));
 //초기에 문서 객체를 추가합니다.
 appendDocument();
 
+$(window).scroll(function(){
+    // 변수를 선언합니다. 스크롤바가 끝에 안닿아도 새로 추가(+100)
+    let scrollHeight = $(window).scrollTop()+$(window).height() +100;
+    let documentHeight = $(document).height();
+
+
+    // 검사합니다.
+    if(scrollHeight > documentHeight) {
+        appendDocument();
+    }
+});
     </script>
 </body>
 </html>
