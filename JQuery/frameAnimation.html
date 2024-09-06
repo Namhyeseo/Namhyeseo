@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frame Animation</title>
+    <style>
+      div#animate {
+        width: 300px;
+        height: 400px;
+
+        background-color: gray;
+
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="#start_btn">start</button>&nbsp;&nbsp;&nbsp;<button
+      id="#stop_btn"
+    >
+      stop</button
+    ><br />
+    <img id="image" />
+    <div id="animate"></div>
+
+    <script>
+      let image = document.querySelector("#image");
+      let div = document.querySelector("#animate");
+      let i = 0;
+
+      let motion;
+
+      document.querySelector("#start_btn").onclick = function () {
+        if (!motion) {
+          motion = setInterval(function () {
+            //image 태그
+            image.src = "images/" + (i % 15) + ".png";
+
+            //div 태그 백그라운드
+            div.style.background =
+              "url('" + "images/" + (i % 15) + ".png" + "')";
+            i = i + 1;
+          }, 1000 / 20);
+        }
+      };
+
+      document.querySelector("#stop_btn").onclick = function () {
+        alert("stop btn");
+        clearInterval(motion);
+        motion = null;
+      };
+    </script>
+  </body>
+</html>

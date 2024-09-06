@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jQuery Basic</title>
+    <style>
+      #box {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+      }
+      .hover {
+        background-color: blue;
+        border-radius: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box"></div>
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+      $("box").hover(
+        function () {
+          $("box").addClass("hover");
+          $("box").css("background-color", "blue");
+        },
+        function () {
+          $("box").removeClass("hover");
+          $("box").css("background-color", "red");
+        }
+      );
+    </script>
+  </body>
+</html>

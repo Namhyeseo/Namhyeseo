@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jQuery Create</title>
+  </head>
+
+  <body>
+    <button onclick="add_h1();">add h1</button>
+
+    <div id="target"></div>
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+      let i = 0;
+      function add_h1() {
+        //alert("h1 btn");
+        i = i + 1;
+        let h1 = $("<h1>").text("jQuery로 만든 h1 tag_" + i);
+        //$("div#target").append(h1).css("background", "green");
+        //$("div#target").prepend(h1).css("background", "green");
+
+        //$("div#target")
+        //.css({
+        //height: "30px",
+        //background: "blue",
+        //}).after(h1);
+
+        $("div#target")
+          .css({
+            height: "30px",
+            background: "blue",
+          })
+          .after(h1);
+      }
+    </script>
+  </body>
+</html>

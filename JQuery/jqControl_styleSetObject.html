@@ -1,38 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>jQuery Basic</title>
+
     <style>
       .box {
         position: absolute;
       }
 
-      div.box:nth-child(5) {
+      body > div > .box:nth-child(1) {
         left: 10px;
         top: 50px;
       }
-      div.box:nth-child(6) {
+      body > div > .box:nth-child(2) {
         left: 120px;
         top: 50px;
       }
-      div.box:nth-child(7) {
+      body > div > .box:nth-child(3) {
         left: 230px;
         top: 50px;
-      }s
+      }
     </style>
   </head>
   <body>
-    <button onclick="circle_go();">●</button>&nbsp;&nbsp;<button
-      onclick="rect_go();"
-    >
-      ■</button
-    >&nbsp;&nbsp;<button onclick="shift_go();">→</button>
+    <button onclick="circle_go();">●</button>&nbsp;&nbsp;
+    <button onclick="rect_go();">■</button>&nbsp;&nbsp;
+    <input type="text" id="shift" />
+    <button onclick="shift_go();">→</button>
     <br />
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
+    <div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+    </div>
 
     <script src="js/jquery-3.7.1.min.js"></script>
     <script>
@@ -55,14 +55,19 @@
         });
       }
       function shift_go() {
+        let shift_unit = Number($("input#shift").val());
+        if (shift_unit != 0 && !shift_unit) {
+          alert("입력이 올바르지 않습니다.");
+          return;
+        }
+
         //alert("shift btn click");
         $(".box").each(function (index) {
           //alert($(this).css("left"));
           let left = Number($(this).css("left").replace("px", ""));
-          $(this).css("left", left + 10);
+          $(this).css("left", left + shift_unit);
         });
       }
     </script>
-    <script></script>
   </body>
 </html>

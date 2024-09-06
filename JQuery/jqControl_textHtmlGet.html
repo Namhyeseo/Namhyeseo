@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jQuery Basic</title>
+  </head>
+  <body>
+    <h1>Header-0</h1>
+    <h1>Header-1</h1>
+    <h1>Header-2</h1>
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+      let text = $("h1").text();
+      let html = $("h1").html();
+      // 출력합니다.
+      alert("text:" + text);
+
+      $("h1").each(function () {
+        alert(this.html());
+      });
+      // alert("html:" + html);
+    </script>
+  </body>
+</html>
