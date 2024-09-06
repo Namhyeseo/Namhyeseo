@@ -9,7 +9,7 @@
         width: 300px;
         height: 400px;
 
-        background-color: gray;
+        background-color: red;
 
         background-size: contain;
         background-position: center;
@@ -18,11 +18,8 @@
     </style>
   </head>
   <body>
-    <button id="#start_btn">start</button>&nbsp;&nbsp;&nbsp;<button
-      id="#stop_btn"
-    >
-      stop</button
-    ><br />
+    <button id="start_btn">start</button>&nbsp;&nbsp;&nbsp;
+    <button id="stop_btn">stop</button><br />
     <img id="image" />
     <div id="animate"></div>
 
@@ -40,8 +37,7 @@
             image.src = "images/" + (i % 15) + ".png";
 
             //div 태그 백그라운드
-            div.style.background =
-              "url('" + "images/" + (i % 15) + ".png" + "')";
+            div.style.backgroundImage ="url('" + "images/" + (i % 15) + ".png" + "')";
             i = i + 1;
           }, 1000 / 20);
         }
