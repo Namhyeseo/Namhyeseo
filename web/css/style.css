@@ -16,7 +16,7 @@ ul,li{
 }
 
 a{
-    color: #333333;
+    color: #333;
 }
 
 table,tr,td{
@@ -52,6 +52,7 @@ header div#gnb{
     height: 100%;
 
     position: relative;
+
     float: left;
 }
 
@@ -71,7 +72,6 @@ header div#gnb ul li{
     width: 25%;
     height: 100%;
     float: left;
-   
 }
 
 header div#gnb ul li a{
@@ -88,6 +88,7 @@ header div#gnb ul li a{
     text-decoration: none;
 
     box-sizing: border-box;
+    
     border-left: 1px solid #333; 
     border-top: 1px solid #333; 
     border-bottom: 1px solid #333; 
