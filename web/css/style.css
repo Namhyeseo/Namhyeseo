@@ -56,7 +56,7 @@ header div#gnb{
     float: left;
 }
 
-header div#gnb ul{
+header div#gnb > ul{
     width: 600px;
     height: 40px;
 
@@ -68,13 +68,13 @@ header div#gnb ul{
     
 }
 
-header div#gnb ul li{
+header div#gnb > ul > li{
     width: 25%;
     height: 100%;
     float: left;
 }
 
-header div#gnb ul li a{
+header div#gnb > ul > li > a{
     display: block;
     width: 100%;
     height: 100%;
@@ -95,8 +95,22 @@ header div#gnb ul li a{
 
 }
 
-header div#gnb ul li:last-child a{
+header div#gnb > ul  > li:last-child a{
     border-right: 1px solid #333;
+}
+
+header div#gnb > ul > li > ul{
+    position: absolute;
+    width: 25%;
+
+
+}
+
+header div#gnb > ul > li > ul > li a{
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
 }
 
 section{
@@ -104,11 +118,71 @@ section{
 }
 
 section div#side{
+    width: 100%;
     height: 300px;
+}
+
+section div#side > img{
+    display: block;
+    width: 1000px;
+    margin: 0 auto;
+
 }
 
 section div#contents{
     height: 200px;
+
+    overflow: hidden;
+}
+
+section div#contents div{
+    float: left;
+    height: 100%;
+    width: 33.3%;
+}
+
+section div#contents #left{
+    box-sizing: border-box;
+    padding-top: 10px;
+    position: relative;
+    
+}
+
+section div#contents #left input{
+    display: none;
+}
+
+section div#contents #left > ul{
+overflow: hidden;
+}
+
+section div#contents #left > ul > li{
+    width: 100px;
+    height: 40px;
+    border: 1px solid #333;
+    text-align: center;
+    float: left;
+
+    line-height: 40px;
+}
+
+section div#contents #left > ul > label{
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    cursor: pointer;
+}
+
+
+#notice:checked~.btntitle li:last-child{
+    background: #ccc;
+}
+
+#notice:checked~.btntitle li:first-child{
+    background: #fff;
+    border-bottom: none;
+    border-right: none;
 }
 
 footer{
