@@ -1,145 +1,244 @@
 @charset "utf-8";
 
-*{
-    margin: 0 auto;
-    padding: 0;
-    list-style: none;
-    font-family: "맑은 고딕";
-    color: #333333;
+* {
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  font-family: "맑은 고딕";
+  color: #333333;
 }
 
-div#wrap{
-    width: 1200px;
+div#wrap {
+  width: 1200px;
+  background-color: #ffffff;
+  font-size: 20px;
+}
+
+a {
+  text-decoration: none;
+  display: block;
+}
+
+header {
+  height: 100px;
+  width: 1200px;
+  position: relative;
+}
+
+.top {
+  /*logo와 menu 묶어줌-absolute 안주면 왼쪽 탑에 붙음*/
+  height: 100px;
+  width: 1200px;
+  position: absolute;
+}
+
+.logo {
+  float: left;
+  height: 100px;
+  width: 250px;
+}
+
+.logo img {
+  float: left;
+  height: 50px;
+  width: 200px;
+  margin-top: 25px;
+  margin-left: 15px;
+}
+
+.menu {
+  /*float: right; 포지션땜에 있으나마나*/
+  width: 800px;
+  position: absolute;
+  right: 0px;
+  top: 30px;
+  background-color: #fff;
+  z-index: 1;
+
+  height: 40px;
+}
+
+.navi > li {
+  float: left;
+  width: 200px;
+  background-color: #5e1742;
+}
+
+.navi > li > a {
+  line-height: 40px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  color: #ffffff;
+}
+
+.navi > li:hover {
+  background-color: #c9463d;
+}
+
+.submenu {
+  /*기본값은 안보이게 하는 것*/
+  display: none;
+}
+
+.submenu > li {
+  width: 200px;
+  background-color: #ffffff;
+}
+
+.submenu > li > a {
+  line-height: 35px;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.submenu > li:hover {
+  background-color: #c9463d;
+}
+
+.bodywrap {
+  height: 500px;
+  width: 1200px;
+}
+
+.imgslide {
+  height: 300px;
+  width: 1200px;
+  position: relative; /*영역제한-img에 앱솔루트 줌*/
+  overflow: hidden; /*영역 밖으로 보이지않도록 제한*/
+}
+
+.contents {
+  height: 200px;
+  width: 1200px;
+  position: absolute;
+}
+
+.tabmenu {
+  float: left;
+  height: 180px;
+  width: 395px; /*여백 5px*/
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.tabmenu > li {
+  float: left;
+  width: 100px;
+  line-height: 30px;
+}
+
+.tabmenu > li > a {
+  display: block;
+  font-size: 16px;
+  text-align: center;
+  background-color: #cccccc;
+  border: 1px solid #dddddd;
+  border-bottom: none;
+}
+
+.tabmenu > li > a:hover { /*마우스 올릴때 색상 밝게*/
+  background-color: #eeeeee;
+}
+
+.tabmenu > li:first-child a{ /*공지사항 오른쪽 보더 빼줌*/
+    border-right: none;
+}
+
+.tabmenu > li.active>a{
     background-color: #ffffff;
-    font-size: 20px;
 }
 
-a{
-    text-decoration: none;
-    display: block;
-}
-
-header{
-    height: 100px;
-    width: 1200px;
-    position: relative;
-}
-
-.top{  /*logo와 menu 묶어줌-absolute 안주면 왼쪽 탑에 붙음*/
-    height: 100px;
-    width: 1200px;
+.tabmenu > li div{
     position: absolute;
+    left: 0px;
+    height: 148px;
+    overflow: hidden;
+    top:40px;
 }
 
-.logo{
-    float: left;
-    height: 100px;
-    width: 250px;
-
+.otherwrap {
+  float: right;
+  height: 200px;
+  width: 800px;
 }
 
-.logo img{
-    float: left;
-    height: 50px;
-    width: 200px;
-    margin-top: 25px;
-    margin-left: 15px;
+.otherwrap .banner {
+  float: left;
+  height: 180px;
+  width: 395px; /*여백 5px*/
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
-.menu{
-    /*float: right; 포지션땜에 있으나마나*/
-    width: 800px;
-    position: absolute;
-    right: 0px;
-    top: 30px;
-    background-color: #fff;
-    z-index: 1;
-
-    height: 40px;
+.bntext .banner img {
+  height: 180px;
+  width: 395px;
 }
 
-.navi > li{
-    float: left;
-    width: 200px;
-    background-color: #5e1742;
+.otherwrap .bntext {
+  height: 40px;
+  width: 300px;
+  position: absolute;
+  text-align: center;
+  color: #ffffff;
+  line-height: 40px;
+  background-color: rgba(40, 40, 40, 0.3);
+  left: 450px; /*마진 안주고 계산*/
+  top: 80px;
 }
 
-.navi > li > a{
-    line-height: 40px;
-    font-size: 16px;
-    font-weight: bold;
-    text-align: center;
-    color: #ffffff;
+.banner img:hover {
+  opacity: 0.5;
 }
 
-.navi > li:hover{
-    background-color: #c9463d;
+.otherwrap .shortcut {
+  float: right;
+  height: 180px;
+  width: 395px; /*여백 5px*/
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
-.submenu{ /*기본값은 안보이게 하는 것*/
-    display: none;
+.otherwrap.shortcut img {
+  height: 180px;
+  width: 400px;
 }
 
-.submenu>li{
-    width: 200px;
-    background-color: #ffffff;
+.otherwrap .sctext{           /*바로가기 글자 스타일*/
+	float:right;
+	height:40px;
+    width:300px;
+    position:absolute;
+    text-align:center;
+	color:#ffffff;
+	font-weight:bold;
+    line-height:40px;
+    background-color:rgba(40,40,40,0.3);
+	left:850px;
+	top:80px;
 }
 
-.submenu>li>a{
-    line-height: 35px;
-    font-size: 14px;
-    font-weight: bold;
-    text-align: center;
+.shortcut img:hover {
+  opacity: 0.5;
 }
 
-.submenu > li:hover{
-    background-color: #c9463d;
+.imgslide > a {
+  display: block;
+  position: absolute; /*위치잡아*/
 }
 
-.bodywrap{
-    height: 500px;
-    width: 1200px;
-}
-
-.imgslide{
-    height: 300px;
-    width: 1200px;
-    position: relative; /*영역제한-img에 앱솔루트 줌*/
-    overflow: hidden;   /*영역 밖으로 보이지않도록 제한*/
-}
-
-.contents{
-    height: 200px;
-    width: 1200px;
-    position: absolute;
-}
-
-.tabmenu{
-    float: left;
-    height: 180px;
-    width: 395px; /*여백 5px*/
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-.otherwrap{
-    float: right;
-    height: 200px;
-    width: 800px;
-}
-
-.otherwrap .banner{
-    float: left;
-    height: 180px;
-    width: 395px; /*여백 5px*/
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-.otherwrap .shortcut{
-    float: right;
-    height: 180px;
-    width: 395px; /*여백 5px*/
-    margin-top: 10px;
-    margin-bottom: 10px;
+.imgtext {
+  height: 50px;
+  width: 500px;
+  position: absolute;
+  margin: -30px 0 0 -250px; /*마진기준은 꽁다리라 센터포지션잡으려고 크기의 반 줌(위 오 아 왼)*/
+  text-align: center;
+  color: #ffffff;
+  font-weight: bold;
+  line-height: 50px;
+  background-color: rgba(40, 40, 40, 0.5); /*0.5(마지막)은 불투명도, 0은 투명*/
+  left: 50%; /*텍스트 상자 위치를 센터로*/
+  top: 50%;
 }
