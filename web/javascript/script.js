@@ -14,4 +14,11 @@ setInterval(function(){
         $(this).parent().addClass("active").siblings().removeClass("active");
     }); /*누른 li제외 나머지 li들에 active remove*/
 
-    
+    $(".notice li:first").click(function(){
+        $("#modal").addClass('active');
+    });
+
+    $(".btn").click(function(){
+        $("#modal").removeClass('active');
+    });
+
