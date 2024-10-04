@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>backface</title>
+    <style>
+        .container{
+            position: relative;
+            margin: 10px 0 20px 0;
+            perspective: 1000; /*원근감 주는 기울기*/
+        }
+        .card{
+            width: 200px;
+            height: 50px;
+            position: relative;
+            transform-style: preserve-3d; /*perspective와 세트, z축 설정 가로돌리기*/
+            transition: 0.5s;
+        }
+        .face{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            color: white;
+            line-height: 50px;
+            text-align: center;
+            backface-visibility: hidden; /*돌아갈 때 뒷면 보이면 안됨*/
+        }
+        .front{
+            background: red;
+        }
+        .back{
+            transform: rotateY(180deg); /*y축 방향(뒷면)으로 180도 돌아가있는 상태*/
+            background: green;
+        }
+        .container:hover .card{
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="face front">Front</div>
+            <div class="face back">Back</div>
+        </div>
+    </div>
+</body>
+</html>
