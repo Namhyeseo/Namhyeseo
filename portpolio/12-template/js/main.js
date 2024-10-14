@@ -72,7 +72,7 @@ prev.onclick=function(e){
     //num값을 증가시키며 frame 45도 만큼 증가시키며 시계 방향으로 계속 회전
     num++;  
     frame.style.transform = `rotate(${deg* num}deg)`;    
-//0 prev하면 7 나머지는 순차적
+    //0 prev하면 7 나머지는 순차적
     (active == 0 ) ? active = len : active--;
     activation(active, lists);    
 
@@ -86,7 +86,7 @@ next.onclick=function(e){
 
     num--;  
     frame.style.transform = `rotate(${deg* num}deg)`;    
-//7일때 next하면 0, 나머지는 순차적
+    //7일때 next하면 0, 나머지는 순차적
     (active == len ) ? active = 0 : active++;
     activation(active, lists);    
     
