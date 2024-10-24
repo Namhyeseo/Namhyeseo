@@ -165,14 +165,96 @@ section{
     line-height: 30px;
     font-size: 14px;
 }
+.notice li:hover{
+    font-weight: bold;
+}
+.notice li span{
+    float: right;
+}
 
 .gallery{
     float: left;
     width: 300px;
     height: 200px;
 }
+.gallery h4{
+    float: left;
+    height: 50px;
+    line-height: 50px;
+}
+.gallery ul li{ 
+    float: left;
+    padding: 10px;
+    margin-top: 10px;
+}
+.gallery img{
+    width: 80px;
+    height: 80px;
+}
+.gallery li:hover{
+    opacity: 0.5;
+}
+
 .shortcut{
     float: left;
     width: 200px;
     height: 200px;
+}
+.shortcut img{
+    float: right;
+    width: 180px;
+    height: 180px;
+    padding: 10px;
+}
+.sctext{
+    width: 100px;
+    text-align: center;
+    font-weight: bold;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.5);
+    margin-top: 85px; /*텍스트 포지션주고 마진으로 센터링*/
+    margin-left: 50px;
+}
+
+footer{ /* D영역: 와이어프레임 오른쪽 하단 영역 */
+    float: right;
+}
+.bottom{ /* 로고+Copyright+패밀리사이트 영역 */
+    float: right;
+    width: 800px;
+    height: 100px;
+    background-color: #cccccc;
+}
+.btlogo{
+    float: left;
+    width: 200px;
+    height: 100px;
+}
+.btlogo img{
+    float: left;
+    width: 200px;
+    height: 40px;
+    margin-top: 25px;
+    margin-left: 10px;
+}
+.copy{
+    float: left;
+    width: 400px;
+    height: 100px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 100px;
+}
+.familysite{
+    float: right;
+    width: 200px;
+    height: 100px;
+}
+.familysite select{
+    float: right;
+    height: 30px;
+    width: 190px;
+    margin-top: 33px;
+    margin-right: 10px;
+    font-size: 14px;
 }
