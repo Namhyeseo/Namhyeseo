@@ -21,11 +21,11 @@ a{
 /* header */
 header{              /* A영역: 상단 영역 */
     width: 100%;     /* 상단 너비(브라우저100%) */
-    height: 100px;   /* 상단 높이 */
+    height: 100px;   
     background-color: #dddddd;
 }
 .wrap{               /*header와 footer 영역 콘텐츠 묶어줌 */
-    width: 1200px;   /*header와 footer 영역 콘텐츠 너비 */
+    width: 1200px;   
 }
 .logo{               /* 로고 영역 스타일 */
     float: left;   
