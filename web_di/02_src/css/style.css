@@ -1,0 +1,61 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+    font-family: "맑은 고딕";
+    color: #333333;
+}
+html,body{
+    min-width: 1200px;
+    background-color: #ffffff;
+    font-size: 20px;
+}
+a{
+    text-decoration: none;
+    display: block;
+}
+
+/* header */
+header{              /* A영역: 상단 영역 */
+    width: 100%;     /* 상단 너비(브라우저100%) */
+    height: 100px;   /* 상단 높이 */
+    background-color: #dddddd;
+}
+.wrap{               /*header와 footer 영역 콘텐츠 묶어줌 */
+    width: 1200px;   /*header와 footer 영역 콘텐츠 너비 */
+}
+.logo{               /* 로고 영역 스타일 */
+    float: left;   
+    width: 250px;
+    height: 100px;
+}
+.menu{               /* 메뉴 영역 스타일 */
+    float: right;
+    width: 800px;
+    height: 100px;
+    z-index: 1;
+}
+.navi{               /*  전체 메뉴 스타일 */
+    float: right;
+    margin-top: 30px;
+    margin-right: 10px;
+}
+.navi>li{            /*  각 메인 메뉴 스타일 */
+    float: left;
+}
+.navi>li>a{          /*  각 메인 메뉴 <a> 요소 스타일 */
+    width: 180px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    background-color: #333333;
+    color: #ffffff;
+}
+.navi>li>a:hover{    /*  <a> 요소에 마우스를 올릴 때 스타일 */
+    background-color: #30a3f3;
+}
