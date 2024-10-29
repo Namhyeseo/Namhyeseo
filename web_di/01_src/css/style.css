@@ -72,7 +72,6 @@ header{  /* A영역: 와이어프레임 왼쪽 영역 */
 	display:none;
 	z-index:1;
 }
-
 .submenu>li>a{    
 	width:180px;
 	height:40px;
@@ -86,30 +85,7 @@ header{  /* A영역: 와이어프레임 왼쪽 영역 */
 	background-color:#999999;
 	color:#ffff00;
 }
-.submenu{
-    float: left;
-    width: 180px;
-    height: 100%;
-    left: 180px;
-    top: 0px;
-    position: absolute;
-    background-color: #cccccc;
-    display: none;
-    z-index: 1;
-}
-.submenu>li>a{
-    width: 180px;
-    height: 40px;
-    line-height: 40px;
-    font-size: 14px;
-    font-weight: bold;
-    background-color: #cccccc;
-    color: #ffffff;
-}
-.submenu>li>a:hover{
-    background-color: #999999;
-    color: #ffff00;
-}
+
 
 /* section */
 section{
