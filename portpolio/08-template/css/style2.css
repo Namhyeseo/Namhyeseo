@@ -60,6 +60,11 @@ header .inner .logo{
 	color: #fff;
 	padding: 0px 10px;
  }  
+ header .inner .icons{
+	letter-spacing: 5px;
+	float: left;
+	color: #fff;
+ }
 
  header .inner #gnb{
 	position: absolute;
@@ -80,35 +85,39 @@ header .inner .logo{
 
  .submenu{         /* 서브 메뉴 영역 스타일 */
 	width:100%;
-	height:160px;
+	height:20vh;
 	position:absolute;
 	display:none;
 	z-index:1;
-	background:red;
+	background:#ffffff;
+	left: 0;
 }
 .submenu>li>a{    /* 각 서브 메뉴의 <a> 요소 스타일 */ 
 	width:100%;
-	height:40px;
+	height:100%;
 	line-height:40px;
 	font-size:14px;
 	font-weight:bold;
 	text-align:center;
 	background:#ffffff;
 	color:#333333;
+	
+
 }
 .submenu>li>a:hover{ /* <a> 요소에 마우스를 올릴 때 스타일 */ 
 	background-color:#30a3f3;
+	font-weight: bold;
 }
- header .inner #gnb li a:hover {
-	background: #555;
-	color: #fff;
-}
- 
+.icons{
+	float: right;
+	margin-left: 30px;
+} 
+
  /* figure */
  
  figure {
 	width: 100%;
-	height: alc100vh;
+	height: 90vh;
     image-rendering: -webkit-optimize-contrast; 
     backface-visibility: hidden; /*전체 브라우저 높이에서 120px만큼 빼줌*/
 	background: #000;
@@ -129,29 +138,36 @@ figure .inner {
 	width: 1180px;
 	margin: 0px auto;
 	position: relative;
+	text-align: center;
 }
-figure .inner h1 {
-	font: bold 120px "arial";
+figure .inner span {
+	font:  20px "arial";
 	color: #fff;
+	
 	margin-bottom: 20px;
 }
+figure .inner h2 {
+	font:  120px "arial";
+	color: #fff;
+	margin-bottom: 20px;
+	
+}
 figure .inner p {
-	font: bold 50px "arial";
+	font:  20px "arial";
 	color: #fff;
 	margin-bottom: 60px;
 }
 figure .inner a {
 	display: block;
-    float: left;
-	width: 200px;
-	height: 60px;
+	width: 100px;
+	height: 30px;
 	border: 1px solid #bbb;
-	font: normal 16px/30px "arial";
+	font: bold 11px/30px "arial";
 	color: #fff;
-    line-height: 55px;
-	text-align: center;
 	letter-spacing: 1px;
 	transition: all 0.5s;
+	margin: 0 auto;
+	border-radius: 50px;
 }
 figure .inner a:hover {
 	background: #fff;
@@ -171,7 +187,6 @@ section .inner {
 section .inner h1 {
 	font: bold 24px "arial";
 	color: #555;
-	text-align: center;
 	margin-bottom: 50px;
 }
 
@@ -185,8 +200,8 @@ section .inner .wrap article{
 }
 section .inner .wrap article .pic{
 	width: 100%;
-	height: 120px;
-	background: #333;
+	height: 300px;
+	background: #000000;
 	margin-bottom: 15px;
 	position: relative;
 	overflow: hidden;
@@ -210,13 +225,12 @@ section .inner .wrap article h2{
 	margin-bottom: 10px;
 }
 section .inner .wrap article h2 a{
-	font:bold 16px "arial";
+	font: 18px "arial";
+	text-align: center;
 	color: #555;
+	
 }
-section .inner .wrap article P{
-	font:14px/1.4 "arial"; /* /1.4는 줄간격=line height*/
-	color: #777;
-}
+
 
 /*footer*/
 
